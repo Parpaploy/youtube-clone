@@ -1,0 +1,10 @@
+Long video
+video_id (v_l)
+vide_url (v_l)
+video_thumbnail (v_l)
+video_title (v_l)
+channel_id (c)
+channel_name (c)
+channel_profile_picture (c)
+view_count (p)
+video_created_at (v_l)

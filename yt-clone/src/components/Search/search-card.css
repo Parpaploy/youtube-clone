@@ -1,0 +1,56 @@
+.search-card {
+    display: grid;
+    grid-template-columns: 360px auto;
+    gap: 16px;
+}
+
+.search-card:hover {
+    cursor: pointer;
+}
+
+.search-card .-about {
+    display: block;
+    position: relative;
+}
+
+.search-card .-title {
+    -webkit-line-clamp: 1;
+    width: calc(100% - 40px);
+}
+
+.search-card .-caption,
+.search-card .-view,
+.search-card .-channel-name {
+    font-weight: 400;
+    font-size: 12px;
+    color: #606060;
+    line-height: 16px;
+}
+
+.search-card .-option {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.search-card .-about:hover .-option {
+    display: block;
+}
+
+.search-card .-channel {
+    display: grid;
+    grid-template-columns: 24px auto;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 0;
+}
+
+.search-card .-channel-img {
+    width: 24px;
+    height: 24px;
+}
+
+.search-card .thumb {
+    margin: 0;
+}

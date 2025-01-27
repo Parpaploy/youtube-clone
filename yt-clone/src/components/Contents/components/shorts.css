@@ -1,0 +1,30 @@
+.short .-title {
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+    color: black;
+    margin-bottom: 4px;
+}
+
+.short .-thumb {
+    aspect-ratio: 9 / 16;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.short .-view {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    color: #606060;
+}
+
+.short .-about {
+    display: grid;
+    grid-template-columns: auto 40px;
+}

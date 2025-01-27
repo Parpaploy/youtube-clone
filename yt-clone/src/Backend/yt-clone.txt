@@ -1,0 +1,63 @@
+table: videos_long
+- video_id *
+- title
+- description
+- duration
+- thumbnail_url
+- video_url
+- created_at
+- updated_at
+- channel_id
+
+table: videos_short
+- video_id *
+- title
+- description
+- duration
+- thumbnail_url
+- video_url
+- created_at
+- channel_id
+
+table: channels
+- channel_id *
+- name_channel
+- banner_url
+- username_channel
+- description_channel
+- profile_channel_url
+- created_at
+- updated_at
+
+table: channel_subscribe
+- user_id *
+- channel_id *
+- subscribed_at
+
+table: users
+- user_id *
+- username
+- password
+- email
+- first_name
+- last_name
+- profile_picture_url
+- created_at
+- updated_at
+
+table: comments
+- comment_id *
+- video_id
+- user_id
+- content
+- created_at
+- updated_at
+
+table: popular
+- video_id *
+- view_count
+- like_count
+- dislike_count
+- comment_count
+- created_at
+- updated_at
