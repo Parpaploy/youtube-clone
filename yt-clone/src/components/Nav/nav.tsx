@@ -1,7 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import SearchBox from "../Search/search-box";
 import "./nav.css";
 
 function NavBar() {
+  const navigate = useNavigate();
+  const GoBackHome = () => {
+    navigate("/");
+  };
+
   return (
     <>
       <section id="nav">
@@ -9,7 +15,12 @@ function NavBar() {
           <div className="-ham">
             <img src="https://placehold.co/24x24" />
           </div>
-          <div className="-logo">
+          <div
+            className="-logo"
+            onClick={() => {
+              GoBackHome();
+            }}
+          >
             <img src="https://placehold.co/97x20" />
           </div>
         </div>

@@ -7,7 +7,7 @@ function SearchBox() {
 
   const handleSearch = () => {
     const qp = new URLSearchParams({
-      search_params: query,
+      search_query: query,
     });
     console.log(`/result?${qp.toString()} : result`);
     navigate(`/result?${qp.toString()}`);
@@ -29,7 +29,8 @@ function SearchBox() {
           </div>
           <button
             className="-btn"
-            onClick={() => {
+            onClick={(e) => {
+              e.preventDefault();
               handleSearch();
             }}
           >

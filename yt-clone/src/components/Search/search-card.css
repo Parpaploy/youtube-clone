@@ -14,8 +14,17 @@
 }
 
 .search-card .-title {
-    -webkit-line-clamp: 1;
     width: calc(100% - 40px);
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.6rem;
+    color: black;
+    margin-bottom: 4px;
 }
 
 .search-card .-caption,
@@ -51,6 +60,18 @@
     height: 24px;
 }
 
-.search-card .thumb {
+.search-card .-channel-img>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.search-card .-thumb {
     margin: 0;
+}
+
+.search-card .-thumb img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
 }

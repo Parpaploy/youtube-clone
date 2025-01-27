@@ -21,6 +21,7 @@
 
 #nav .-ham:hover {
     background-color: #f2f2f2;
+    cursor: pointer;
 }
 
 #nav .-ham img {
@@ -31,6 +32,10 @@
 
 #nav .-logo {
     padding: 0 16px;
+}
+
+#nav .-logo:hover {
+    cursor: pointer;
 }
 
 #nav .-center {

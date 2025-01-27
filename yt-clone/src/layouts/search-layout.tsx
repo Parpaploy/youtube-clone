@@ -8,44 +8,45 @@ import axios from "axios";
 
 function SearchLayout() {
   const location = useLocation();
-  const query = location.state?.query;
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get("search_query");
 
   const [searchResult, setSearchResult] = useState([]);
-  const [searchParams] = useSearchParams();
-  const testFetch = async () => {
-    console.log(searchParams, ":location state");
-    try {
-      console.log(query, ": query");
-      const data = await axios.get(
-        `http://localhost:3000/result?search_query=${query}`
-      );
-      console.log(data, ":axios response");
-    } catch (e) {
-      console.log(e);
-    }
-  };
+
+  // const testFetch = async () => {
+  //   console.log(searchParams, ":location state");
+  //   try {
+  //     console.log(query, ": query");
+  //     const data = await axios.get(
+  //       `http://localhost:3000/result?search_query=${query}`
+  //     );
+  //     console.log(data, ":axios response");
+  //   } catch (e) {
+  //     console.log(e);
+  //   }
+  // };
   useEffect(() => {
-    // const fetchSearch = async () => {
-    //   try {
-    //     if (query) {
-    //       console.log(query, ": query");
-    //       const data = await fetch(
-    //         `http://localhost:3000/result?search_query=${query}`
-    //       );
-    //       console.log(data, ":data");
-    //       const json = await data.json();
-    //       setSearchResult(json);
-    //       console.log(json);
-    //     } else {
-    //       console.log("Query is undefined or empty");
-    //     }
-    //   } catch (e) {
-    //     console.log(e);
-    //   }
-    // };
-    // fetchSearch();
-    // console.log(query);
-    testFetch();
+    const fetchSearch = async () => {
+      try {
+        if (query) {
+          console.log(query, ": query");
+          const data = await fetch(
+            `http://localhost:3000/result?search_query=${query}`
+          );
+          console.log(data, ":data");
+          const json = await data.json();
+          setSearchResult(json);
+          console.log(json);
+        } else {
+          console.log("Query is undefined or empty");
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    fetchSearch();
+    console.log(query);
+    // testFetch();
   }, [query]);
 
   return (
