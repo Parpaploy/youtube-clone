@@ -144,7 +144,7 @@ app.get("/result", (req, res) => {
       return res.status(400).send("กรุณาระบุคำค้นหา");
     }
 
-    const query = `SELECT v.video_id, v.video_title, v.video_created_at, v.video_thumbnail,
+    const query = `SELECT v.video_id, v.video_title, v.video_created_at, v.video_thumbnail, v.video_description,
 c.channel_name AS channel_name, c.channel_profile_picture,
 p.view_count
 FROM videos_long v
